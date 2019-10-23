@@ -2,15 +2,20 @@ use std::env;
 use std::path::PathBuf;
 
 fn main() {
-    // Link the system ltc shared library
-    println!("cargo:rustc-link-lib=ltc");
+    // Build libltc
+    let src = [
+        "vendor/src/ltc.c",
+        "vendor/src/decoder.c",
+        "vendor/src/encoder.c",
+        "vendor/src/timecode.c",
+    ];
 
-    // FIXME: Wait for next bindgen release, see: https://github.com/rust-lang/rust-bindgen/issues/1647
-    // Invalidate built crate whenever `wrapper.h` changes
-    //println!("cargo:rerun-if-changed=wrapper.h");
+    let mut builder = cc::Build::new();
+    let build = builder.files(src.iter()).include("vendor/src");
+    build.compile("ltc");
 
     let bindings = bindgen::Builder::default()
-        .header("wrapper.h")
+        .header("vendor/src/ltc.h")
         // FIXME: Wait for next bindgen release, see: https://github.com/rust-lang/rust-bindgen/issues/1647
         //.parse_callbacks(bindgen::CargoCallbacks))
         .generate()
