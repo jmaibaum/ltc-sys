@@ -9,7 +9,7 @@ fn decode_raw(mut data: &[u8], apv: Option<i32>) -> String {
         let apv = apv.unwrap_or(1920);
         let mut sound = [0u8; 1024];
 
-        let mut total: usize = 0;
+        let mut total = 0;
         let decoder = ltc_decoder_create(apv, 32);
         let mut output = String::new();
         loop {
