@@ -7,5 +7,4 @@ edition = "2018"
 [dependencies]
 
 [build-dependencies]
-bindgen = "0.51"
 cc = { version = "1.0", features = ["parallel"] }
