@@ -20,8 +20,10 @@ fn decode_raw(mut data: &[u8], apv: Option<i32>) -> String {
                 let mut frame = LTCFrameExt {
                     biphase_tics: [0.0f32; 80],
                     ltc: LTCFrame {
-                        __bindgen_padding_0: 0,
-                        _bitfield_1: __BindgenBitfieldUnit::new([0u8; 10]),
+                        _bitfield_1: LTCFrame::new_bitfield_1(
+                            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                        ),
+                        ..Default::default()
                     },
                     off_start: 0,
                     off_end: 0,

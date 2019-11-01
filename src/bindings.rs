@@ -93,7 +93,7 @@ pub const LTC_FRAME_BIT_COUNT: u32 = 80;
 pub type wchar_t = ::std::os::raw::c_int;
 #[repr(C)]
 #[repr(align(16))]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct max_align_t {
     pub __clang_max_align_nonce1: ::std::os::raw::c_longlong,
     pub __bindgen_padding_0: u64,
@@ -142,7 +142,7 @@ pub type ltcsnd_sample_t = ::std::os::raw::c_uchar;
 pub type ltc_off_t = ::std::os::raw::c_longlong;
 #[repr(C)]
 #[repr(align(4))]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct LTCFrame {
     pub _bitfield_1: __BindgenBitfieldUnit<[u8; 10usize], u16>,
     pub __bindgen_padding_0: u16,
@@ -690,9 +690,14 @@ fn bindgen_test_layout_LTCFrameExt() {
         )
     );
 }
+impl Default for LTCFrameExt {
+    fn default() -> Self {
+        unsafe { ::std::mem::zeroed() }
+    }
+}
 #[doc = " Human readable time representation, decimal values."]
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct SMPTETimecode {
     #[doc = "< the timezone 6bytes: \"+HHMM\" textual representation"]
     pub timezone: [::std::os::raw::c_char; 6usize],
