@@ -1,13 +1,13 @@
 # [WIP] Rust FFI bindings for libltc
 
 This is a work-in-progress Rust FFI bindings crate for
-[libltc](https://github.com/x42/libltc).
+[https://github.com/x42/libltc](https://github.com/x42/libltc).
 
 
 ## Rust wrapper
 
 There is a (also work-in-progress) Rust wrapper crate available at
-[ltc](https://github.com/jmaibaum/ltc).
+[https://github.com/x42/ltc](https://github.com/jmaibaum/ltc).
 
 
 ## Bindgen commandline
