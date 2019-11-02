@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/jmaibaum/ltc-sys.svg?branch=master)](https://travis-ci.com/jmaibaum/ltc-sys)
+
 # [WIP] Rust FFI bindings for libltc
 
 This is a work-in-progress Rust FFI bindings crate for
