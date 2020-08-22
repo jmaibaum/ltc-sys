@@ -18,5 +18,6 @@
 // SPDX-License-Identifier: LGPL-3.0-or-later
 #![allow(non_camel_case_types)]
 #![allow(non_snake_case)]
+#![allow(clippy::too_many_arguments)]
 
 include!("./bindings.rs");

@@ -82,7 +82,7 @@ where
     }
 }
 pub const LTC_H: u32 = 1;
-pub const LIBLTC_VERSION: &'static [u8; 6usize] = b"1.3.1\0";
+pub const LIBLTC_VERSION: &[u8; 6usize] = b"1.3.1\0";
 pub const LIBLTC_VERSION_MAJOR: u32 = 1;
 pub const LIBLTC_VERSION_MINOR: u32 = 3;
 pub const LIBLTC_VERSION_MICRO: u32 = 1;
