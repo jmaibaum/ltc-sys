@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/jmaibaum/ltc-sys.svg?branch=master)](https://travis-ci.com/jmaibaum/ltc-sys)
+[![Build Status](https://github.com/jmaibaum/ltc-sys/workflows/Continuous%20Integration/badge.svg)](https://github.com/jmaibaum/ltc-sys/actions?query=workflow%3A%22Continuous+Integration%22)
 
 # [WIP] Rust FFI bindings for libltc
 
